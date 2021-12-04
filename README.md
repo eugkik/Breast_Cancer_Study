@@ -21,7 +21,7 @@
 <hr>
 
 ## Correlation Analysis and Feature Selection
-[*CorrelationAnalysisAndFeatureSelection.ipynb*]([Data/CorrelationAnalysisAndFeatureSelection.ipynb]) <br>
+[*CorrelationAnalysisAndFeatureSelection.ipynb*](Data/CorrelationAnalysisAndFeatureSelection.ipynb) <br>
 **Target:**<br>
 overall_survival <br>
 overalll_survival_months
@@ -47,7 +47,7 @@ encoded_pr_status<br>
 <hr>
 
 ## Supervised Machine Learning
-[ML Models to Predict Survival Outcome]([Models/ML_Models.ipynb]) <br>
+[ML Models to Predict Survival Outcome](Models/ML_Models.ipynb) <br>
 **Goal: Predict Breast Cancer Survival Based on Clinincal Attributes**<br>
 - We utilized 19 clinical attributes and 5 machine learning models to attempt to predict outcomes
 
@@ -79,7 +79,7 @@ encoded_pr_status<br>
 <hr>
 
 ## Unsupervised Machine Learning
-[*PCA_LDA_gene_expression.ipynb*]([Data/PCA_LDA_gene_expression.ipynb]) <br>
+[*PCA_LDA_gene_expression.ipynb*](Data/PCA_LDA_gene_expression.ipynb) <br>
 ### Principal Component Analysis (PCA)
 - Identify the combination of attributes (principal components, or directions in the feature space) that account for the most variance in the data. 
 - Explained variance ratio (first two components): [0.07960216 0.06701992]
