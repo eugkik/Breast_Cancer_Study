@@ -90,7 +90,7 @@ encoded_pr_status<br>
 - Note: This is a supervised method, using known class labels.
 - The LDA is a better approach to separate differenct subtypes of breast cancer patient samples. 
 
-[*heatmap.R*](R/heatmap.R) <br>
+[*heatmap.R*](heatmap/heatmap.R) <br>
 ### Hierarchical Clustering
 - 489 Z-score mRNA levels of gene expression
 - We would like to see if groups of patients share a common gene expression profile based on the clinical evaluation. 
