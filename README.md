@@ -53,7 +53,7 @@ encoded_pr_status<br>
 
 **Models Utilized**<br>
 Logistic Regression, Support Vector Classification, Random Forest Classifier, AdaBoost classifier, and XGBoost Classifier<br>
-Logistic Regression had the strongest performance of predicting overall survival with an accuracy of 0.696
+Random Forest Classifier had the strongest performance of predicting overall survival with an accuracy of 0.696
 
 **Clinincal Attributes Used**<br>
 age_at_diagnosis<br>
