@@ -47,8 +47,34 @@ encoded_pr_status<br>
 <hr>
 
 ## Supervised Machine Learning
+[ML Models to Predict Survival Outcome]([Models/ML_Models.ipynb]) <br>
+**Goal: Predict Breast Cancer Survival Based on Clinincal Attributes**<br>
+- We utilized 19 clinical attributes and 5 machine learning models to attempt to predict outcomes
 
+**Models Utilized**<br>
+Logistic Regression, Support Vector Classification, Random Forest Classifier, AdaBoost classifier, and XGBoost Classifier<br>
+Logistic Regression had the strongest performance of predicting overall survival with an accuracy of 0.696
 
+**Clinincal Attributes Used**<br>
+age_at_diagnosis<br>
+chemotherapy<br>
+neoplasm_histologic_grade<br>
+hormone_therapy<br>
+lymph_nodes_examined_positive<br>
+mutation_count<br>
+radio_therapy<br>
+tumor_size<br>
+tumor_stage<br>
+encoded_type_of_breast_surgery<br>
+encoded_cancer_type_detailed<br>
+encoded_cellularity<br>
+encoded_pam50_+_claudin-low_subtype<br>
+encoded_er_status<br>
+encoded_her2_status<br>
+encoded_tumor_other_histologic_subtype<br>
+encoded_inferred_menopausal_state<br>
+encoded_integrative_cluster<br>
+encoded_pr_status<br>
 
 <hr>
 
