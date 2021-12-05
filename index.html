@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Scrolling Nav - Start Bootstrap Template</title>
+        <title>Breast Cancer Survival Analytics</title>
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
@@ -14,60 +14,92 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
             <div class="container px-4">
-                <a class="navbar-brand" href="#page-top">Start Bootstrap</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <a class="navbar-brand" href="#page-top">
+                    <div _ngcontent-iim-c371="" class="Header-logoText Header-logoText--Scrolled">Data<br>Visualization<br>Bootcamp</div>
+                </a>
+                <button class="navbar-toggler" type="button" data-b s-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#Introduction">Introduction</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#Data Exploration">Data Exploration</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#Model Selection">Model Selection</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#Results and Conclusion">Results and Conclusion</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#Our Team">Our Team</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
         <!-- Header-->
+      
         <header class="bg-primary bg-gradient text-white">
             <div class="container px-4 text-center">
-                <h1 class="fw-bolder">Welcome to Scrolling Nav</h1>
-                <p class="lead">A functional Bootstrap 5 boilerplate for one page scrolling websites</p>
-                <a class="btn btn-lg btn-light" href="#about">Start scrolling!</a>
-            </div>
+                <h1 class="font_4" style="line-height:1.25em;text-align:center;font-size:72px"><span class="color_32"><span style="font-weight:bold">BREAST CANCER&nbsp;<br>SURVIVAL ANALYTICS</span></span></h1>
+                <p class="lead">Developing Machine Learning Algorithms that Predict Survival</p>
+                <a class="btn btn-lg btn-light" href="#about">Start Assessment</a>
+            </div> 
+    
         </header>
-        <!-- About section-->
-        <section id="about">
+        <!-- Introduction section-->
+        <section id="Introduction">
             <div class="container px-4">
                 <div class="row gx-4 justify-content-center">
                     <div class="col-lg-8">
-                        <h2>About this page</h2>
-                        <p class="lead">This is a great place to talk about your webpage. This template is purposefully unstyled so you can use it as a boilerplate or starting point for you own landing page designs! This template features:</p>
+                        <h2>Introduction</h2>
+                        <p class="lead">Breast cancer is the most common cancer worldwide and is a leading cause of cancer death for women. The purpose of this project was to analyze how accurate the various clinical characteristics predict survival and survival duration. The dataset used was obtained from <a href="https://www.kaggle.com/raghadalharbi/breast-cancer-gene-expression-profiles-metabric">Kaggle</a> and contains clinical data and gene expression profiles. </p>
                         <ul>
-                            <li>Clickable nav links that smooth scroll to page sections</li>
-                            <li>Responsive behavior when clicking nav links perfect for a one page website</li>
-                            <li>Bootstrap's scrollspy feature which highlights which section of the page you're on in the navbar</li>
-                            <li>Minimal custom CSS so you are free to explore your own unique design options</li>
+                            <li>1904 breast cancer patients</li>
+                            <li>30 clinical attributes (not including patient id)</li>
+                            <li>m-RNA levels z-score for 489 genes</li>
+                            <li>mutation in 173 genes</li>                         
+                        </ul>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Services section-->
-        <section class="bg-light" id="services">
+        <!-- Data Exploration section-->
+        <section class="bg-light" id="Data Exploration">
             <div class="container px-4">
                 <div class="row gx-4 justify-content-center">
                     <div class="col-lg-8">
-                        <h2>Services we offer</h2>
-                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut optio velit inventore, expedita quo laboriosam possimus ea consequatur vitae, doloribus consequuntur ex. Nemo assumenda laborum vel, labore ut velit dignissimos.</p>
+                        <h2>Data Exploration</h2>
+                        <p class="lead">The analysis aims to observe which features are most helpful in predicting patient survival and to see general trends that may aid us in model selection. To do this, the necessary libraries are imported as well as the dataset. Redundant columns and non-important features are dropped from the dataset and label encoder is used to label the categorical data into numbers. Pandas' visualization and r-programming is used to find the data distribution of the features. </p>
+                    </div>
+                </div>
+                <div class="container plot">
+                    <img src="Images/PPT1.jpg" alt="CA4" class="gallery__img">
+                </div>
+            </div>
+        </section>
+        <!-- Model Selection section-->
+        <section id="Model Selection">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>Model Selection</h2>
+                        <p class="lead">We use classification algorithms of supervised learning with our our outcome variable having two sets of values, either live or die. 19 clinical attributes are used with the different type of models in Machine Learning including: Logistic Regression, Support Vector Classification, Random Forest Classifier, AdaBoost Classifier, and XGBoost Classifier. For each classification model, we will predict the test set results and check the accuracy using the confusion matrix. In addition to testing surival of patients, the linear regression model was used to determine if there is a correlation to the overall survival time in months.  </p>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Contact section-->
-        <section id="contact">
+        <!-- Results and conclusion section-->
+        <section id="Results and Conclusion">
             <div class="container px-4">
                 <div class="row gx-4 justify-content-center">
                     <div class="col-lg-8">
-                        <h2>Contact us</h2>
-                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
+                        <h2>Results and Conclusion</h2>
+                        <p class="lead">After applying the different classification models, the Random Forest Classifier produced the strongest accuracy at 0.696. Additionally, we found a weak relationship between the 19 clinical attributes and the length of survival time in months. </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Our Team section-->
+        <section id="Our Team">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>Our Team</h2>
+                        <p class="lead"></p>
                     </div>
                 </div>
             </div>
