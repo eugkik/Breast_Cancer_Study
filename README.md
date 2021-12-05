@@ -47,7 +47,7 @@ encoded_pr_status<br>
 <hr>
 
 ## Supervised Machine Learning
-[ML Models to Predict Survival Outcome](Models/ML_Models.ipynb) <br>
+[*ML Models to Predict Survival Outcome*](Models/ML_Models.ipynb) <br>
 **Goal: Predict Breast Cancer Survival Based on Clinincal Attributes**<br>
 - We utilized 19 clinical attributes and 5 machine learning models to attempt to predict outcomes
 
@@ -75,6 +75,21 @@ encoded_tumor_other_histologic_subtype<br>
 encoded_inferred_menopausal_state<br>
 encoded_integrative_cluster<br>
 encoded_pr_status<br>
+
+[*ML Models to Predict Overall Survival Time*](Models/MultipleLinearRegression_OverallSurvivalMonthes.ipynb) <br>
+**Goal: Predict Breast Cancer Survival Time Based on Clinincal Attributes**<br>
+- We utilized 19 clinical attributes and multiple linear regression to attempt to predict survival time
+
+**Models Utilized**<br>
+Multiple Logistic Regression with R2 ~ 0.1693 <br>
+
+Multiple Linear Regression prediction on the survival time is weak, with high error. <br>
+However, the following features are the top 5 most important for predicting the survival outcome (based on the absolute values of the coefficients) :
+- age_at_diagnosis
+- encoded_tumor_other_histologic_subtype
+- tumor_stage
+- lymph_nodes_examined_positive
+- encoded_cancer_type_detailed
 
 <hr>
 
