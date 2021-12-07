@@ -37,7 +37,7 @@
             <div class="hero-text">
                 <h1 class="font_4" style="line-height:1.25em;text-align:center;font-size:72px"><span class="color_32"><span style="font-weight:bold">BREAST CANCER&nbsp;<br>SURVIVAL ANALYTICS</span></span></h1>
                 <p class="lead">Developing Machine Learning Algorithms to Predict Survival</p>
-                <a class="btn btn-lg btn-light" href="#about">Start Assessment</a>
+                <a class="btn btn-lg btn-light" href="#Introduction">Start Assessment</a>
             </div>                 
         </header>
     
@@ -126,6 +126,52 @@
                       </div>
                     </div>  
                 </div>
+                <br><br>
+                <!-- correlation matrix-->
+                <div class="col-lg-8 container plot justify-content-center ">
+                    <div class="card card-body bg-secondary text-white">
+                      <h5>
+                          Feature correlation
+                      </h5>
+                      <div class="card-header">
+                        <div>
+                          <h6 class="card-title text-center border-bottom"></h6>
+                            <p class="card-text">
+                                With all of the clinial attributes, we would like to see if there are redundant features that need to be removed before downtream analysis. <br>
+                                A collection of 17 features is selected for supervised machine learning prediction.
+                            </p>
+                        </div>
+                      </div>
+                      <div class="card-body row gx-4">
+                        <div class="col-lg-7 container plot justify-content-center ">
+                            <img src="static/images/CorrelationMatrix.jpg" alt="correlationMatrix" style="height: 300px;">
+                        </div>
+                        <div class="col-lg-5">
+                        <p>
+                            <strong>Features (17):</strong><br>
+                                age_at_diagnosis<br>
+                                chemotherapy<br>
+                                neoplasm_histologic_grade<br>
+                                hormone_therapy<br>
+                                lymph_nodes_examined_positive<br>
+                                mutation_count <br>
+                                radio_therapy<br>
+                                tumor_size<br>
+                                tumor_stage encoded_type_of_breast_surgery<br>
+                                encoded_cancer_type_detailed encoded_cellularity<br>
+                                encoded_pam50_+_claudin-low_subtype <br>
+                                encoded_er_status<br>
+                                encoded_her2_status<br>
+                                encoded_tumor_other_histologic_subtype<br>
+                                encoded_inferred_menopausal_state<br>
+                                encoded_integrative_cluster<br>
+                                encoded_pr_status<br>
+
+                        </p>
+                    </div>
+                      </div>
+                    </div>  
+                </div>
             </div>
         </section>
         <!-- Model Selection section-->
@@ -143,7 +189,17 @@
                         </p>
                     </div>
                 </div>
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h4>Supervised Machine Learning</h4>
+                    </div>
+                </div>
                 <!-- unsupervised machine learning-->
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h4>Unsupervised Machine Learning</h4>
+                    </div>
+                </div>
                 <div class="col-lg-8 container plot justify-content-center ">
                     <div class="card card-body bg-secondary text-white">
                       <h5>
