@@ -14,17 +14,17 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
             <div class="container px-4">
-                <a class="navbar-brand" href="/">
+                <a class="navbar-brand" href="{{ url_for('home') }}">
                     <div _ngcontent-iim-c371="" class="Header-logoText Header-logoText--Scrolled">Data<br>Visualization<br>Bootcamp</div>
                 </a>
                 <button class="navbar-toggler" type="button" data-b s-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="#Introduction">Introduction</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#Data Exploration">Data Exploration</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#Model Selection">Model Selection</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#Results and Conclusion">Results and Conclusion</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#Our Team">Our Team</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url_for('home') }}#Introduction">Introduction</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url_for('home') }}#Data Exploration">Data Exploration</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url_for('home') }}#Model Selection">Model Selection</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url_for('home') }}#Results and Conclusion">Results and Conclusion</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url_for('home') }}#Our Team">Our Team</a></li>
                     </ul>
                 </div>
             </div>
