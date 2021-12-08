@@ -37,7 +37,7 @@
             <div class="hero-text">
                 <h1 class="font_4" style="line-height:1.25em;text-align:center;font-size:72px"><span class="color_32"><span style="font-weight:bold">BREAST CANCER&nbsp;<br>SURVIVAL ANALYTICS</span></span></h1>
                 <p class="lead">Developing Machine Learning Algorithms to Predict Survival</p>
-                <a class="btn btn-lg btn-light" href="#Introduction">Start Assessment</a>
+                <a class="btn btn-lg btn-light" href="{{ url_for('predict') }}">Start Assessment</a>
             </div>                 
         </header>
     
@@ -283,12 +283,12 @@
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="box col-md-2" onclick="window.open(href=&quot;https://github.com/NickP20&quot;)">
-                    <img src="https://images.unsplash.com/photo-1638727599830-5e72988254b7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" alt="Nick" width="140" height="140" class="rounded-circle">
+                    <img src="{{url_for('static', filename ='images/np.jpg')}}" alt="Nick" width="140" height="140" class="rounded-circle">
                     <h4>Nick Prieto</h4>
                     <p>View Profile</p>
                 </div>
                 <div class="box col-md-2" onclick="window.open(href=&quot;https://github.com/ZiboZhao0804&quot;)">
-                    <img src="https://images.unsplash.com/photo-1638727599830-5e72988254b7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" alt="Zibo" width="140" height="140" class="rounded-circle">
+                    <img src="{{url_for('static', filename ='images/Zibo.jpg')}}" alt="Zibo" width="140" height="140" class="rounded-circle">
                     <h4>Zibo Zhao</h4>
                     <p>View Profile</p>
                 </div>
