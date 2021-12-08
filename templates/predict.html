@@ -6,9 +6,9 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Breast Cancer Survival Analytics</title>
-        <link rel="icon" type="image/x-icon" href="../static/assets/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="/static/assets/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="../static/css/styles.css" rel="stylesheet" />
+        <link href="/static/css/styles.css" rel="stylesheet" />
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -200,7 +200,7 @@
 			Encoded Integrative Cluster: <b>{{values[17]}}</b> <br>
 			Encoded PR Status: <b>{{values[18]}}</b> <br>
 
-		{% if outcome == 1 %}
+		{% if outcome == 0 %}
 			<h4>Not Good</h4>
 			<audio src="static/images/notgood_sound.mp3" autoplay></audio>
 		{% else %}
@@ -224,9 +224,9 @@
         <!--d3 and plotly-->
         <script src="https://d3js.org/d3.v5.min.js"></script>
         <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-        <script type="text/javascript" src="../static/js/plots.js"></script>
+        <script type="text/javascript" src="/static/js/plots.js"></script>
         <!-- Core theme JS-->
-        <script type="text/javascript" src="../static/js/scripts.js"></script>
+        <script type="text/javascript" src="/static/js/scripts.js"></script>
 
 
     </body>
