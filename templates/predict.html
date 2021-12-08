@@ -39,7 +39,7 @@
 	
 			<br><br><br><br><br>
 			Age
-			<input type="text" name="f1" required/><br>
+			<input type="text" name="f1" size = "3" required/><br>
 
 			Chemotherapy
 			<select name="f2">
@@ -61,10 +61,10 @@
 			</select><br>
 
 			Lymph Nodes Examined Positive
-			<input type="text" name="f5" required/><br>
+			<input type="text" name="f5" size = "3" required/><br>
 			
 			Mutation Count
-			<input type="text" name="f6" required/><br>
+			<input type="text" name="f6" size = "3" required/><br>
 
 			Radio Therapy
 			<select name="f7">
@@ -73,7 +73,7 @@
 			</select><br>
 
 			Tumor Size
-			<input type="text" name="f8" required/><br>
+			<input type="text" name="f8" size = "3" required/><br>
 
 			Tumor Stage
 			<select name="f9">
@@ -84,13 +84,13 @@
 				<option value = 4>4</option>
 			</select><br>
 
-			Encoded Type of Breast Surgery
+			Type of Breast Surgery
 			<select name="f10">
 				<option value = 0>Breast Conserving</option>
 				<option value = 1>Mastectomy</option>
 			</select><br>
 
-			Encoded Cancer Type Detailed
+			Cancer Type Detailed
 			<select name="f11">
 				<option value = 1>Breast Invasive Ductal Carcinoma</option>
 				<option value = 2>Breast Mixed Ductal and Lobular Carcinoma</option>
@@ -100,14 +100,14 @@
 				<option value = 6>Metaplastic Breast Cancer</option>
 			</select><br>
 
-			Encoded Cellularity
+			Cellularity
 			<select name="f12">
 				<option value = 1>Low</option>
 				<option value = 2>Moderate</option>
 				<option value = 0>High</option>
 			</select><br>
 
-			Encoded Pam50 + Claudin-Low Subtype
+			Pam50 + Claudin-Low Subtype
 			<select name="f13">
 				<option value = 0>Basal</option>
 				<option value = 1>HER2</option>
@@ -118,21 +118,21 @@
 				<option value = 6>Claudin-Low</option>
 			</select><br>
 
-			Encoded ER Status
+			ER Status
 			<select name="f14">
 				<option value = 1>Positive</option>
 				<option value = 0>Negative</option>
 			</select><br>
 
-			Encoded HER2 Status
+			HER2 Status
 			<select name="f15">
 				<option value = 1>Positive</option>
 				<option value = 0>Negative</option>
 			</select><br>
 
-			Encoded Tumor Other Histologic Subtype
+			Tumor Other Histologic Subtype
 			<select name="f16">
-				<option value = 0>Ducatl/NST</option>
+				<option value = 0>Ductal/NST</option>
 				<option value = 1>Lobular</option>
 				<option value = 2>Medullary</option>
 				<option value = 3>Metaplastic</option>
@@ -142,13 +142,13 @@
 				<option value = 7>Tubular/Cribriform</option>
 			</select><br>
 
-			Encoded Inferred Menopausal State
+			Inferred Menopausal State
 			<select name="f17">
-				<option value = 0>0</option>
-				<option value = 1>1</option>
+				<option value = 0>Post</option>
+				<option value = 1>Pre</option>
 			</select><br>
 
-			Encoded Integrative Cluster
+			Integrative Cluster
 			<select name="f18">
 				<option value = 0>1</option>
 				<option value = 2>2</option>
@@ -163,13 +163,14 @@
 				<option value = 1>10</option>
 			</select><br>
 
-			Encoded PR Status
+			PR Status
 			<select name="f19">
 				<option value = 1>Positive</option>
 				<option value = 0>Negative</option>
 			</select><br>
 
 			<input type="submit" value="Submit">
+			<br>
 			</form>
 		</div>
 
@@ -179,25 +180,25 @@
 			<h3>Results</h3>
 
 			
-			Age:{{values[0]}} <br>
-			Chemotherapy:{{values[1]}} <br>
-			Neoplasm Histologic Grade:{{values[2]}} <br>
-			Hormone Therapy:{{values[3]}} <br>
-			Lymph Nodes Examined Positive:{{values[4]}} <br>
-			Mutation Count:{{values[5]}} <br>
-			Radio Therapy:{{values[6]}} <br>
-			Tumor Size:{{values[7]}} <br>
-			Tumor Stage:{{values[8]}} <br>
-			Encoded Type of Breast Surgery:{{values[9]}} <br>
-			Encoded Cancer Type Detailed:{{values[10]}} <br>
-			Encoded Cellularity:{{values[11]}} <br>
-			Encoded Pam50 + Claudin-Low Subtype:{{values[12]}} <br>
-			Encoded ER Status:{{values[13]}} <br>
-			Encoded HER2 Status:{{values[14]}} <br>
-			Encoded Tumor Other Histologic Subtype:{{values[15]}} <br>
-			Encoded Inferred Menopausal State:{{values[16]}} <br>
-			Encoded Integrative Cluster:{{values[17]}} <br>
-			Encoded PR Status:{{values[18]}} <br>
+			Age:<b> {{values[0]}}</b> <br>
+			Chemotherapy: <b>{{values[1]}}</b> <br>
+			Neoplasm Histologic Grade: <b>{{values[2]}}</b> <br>
+			Hormone Therapy: <b>{{values[3]}}</b> <br>
+			Lymph Nodes Examined Positive: <b>{{values[4]}}</b> <br>
+			Mutation Count: <b>{{values[5]}}</b> <br>
+			Radio Therapy: <b>{{values[6]}}</b> <br>
+			Tumor Size: <b>{{values[7]}}</b> <br>
+			Tumor Stage: <b>{{values[8]}}</b> <br>
+			Encoded Type of Breast Surgery: <b>{{values[9]}}</b> <br>
+			Encoded Cancer Type Detailed: <b>{{values[10]}}</b> <br>
+			Encoded Cellularity: <b>{{values[11]}}</b> <br>
+			Encoded Pam50 + Claudin-Low Subtype: <b>{{values[12]}}</b> <br>
+			Encoded ER Status: <b>{{values[13]}}</b> <br>
+			Encoded HER2 Status: <b>{{values[14]}}</b> <br>
+			Encoded Tumor Other Histologic Subtype: <b>{{values[15]}}</b> <br>
+			Encoded Inferred Menopausal State: <b>{{values[16]}}</b> <br>
+			Encoded Integrative Cluster: <b>{{values[17]}}</b> <br>
+			Encoded PR Status: <b>{{values[18]}}</b> <br>
 
 		{% if outcome == 1 %}
 			<h4>Not Good</h4>
