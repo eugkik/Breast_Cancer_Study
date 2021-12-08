@@ -14,17 +14,17 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
             <div class="container px-4">
-                <a class="navbar-brand" href="/">
+                <a class="navbar-brand" href="{{ url_for('home') }}">
                     <div _ngcontent-iim-c371="" class="Header-logoText Header-logoText--Scrolled">Data<br>Visualization<br>Bootcamp</div>
                 </a>
                 <button class="navbar-toggler" type="button" data-b s-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="#Introduction">Introduction</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#Data Exploration">Data Exploration</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#Model Selection">Model Selection</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#Results and Conclusion">Results and Conclusion</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#Our Team">Our Team</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url_for('home') }}#Introduction">Introduction</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url_for('home') }}#Data Exploration">Data Exploration</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url_for('home') }}#Model Selection">Model Selection</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url_for('home') }}#Results and Conclusion">Results and Conclusion</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ url_for('home') }}#Our Team">Our Team</a></li>
                     </ul>
                 </div>
             </div>
@@ -43,21 +43,21 @@
 
 			Chemotherapy
 			<select name="f2">
-				<option value = 0>0</option>
-				<option value = 1>1</option>
+				<option value = 0>No</option>
+				<option value = 1>Yes</option>
 			</select><br>
 			
 			Neoplasm Histologic Grade
 			<select name="f3">
-				<option value = 1 >1</option>
+				<option value = 1>1</option>
 				<option value = 2>2</option>
 				<option value = 3>3</option>
 			</select><br>
 
 			Hormone Therapy
 			<select name="f4">
-				<option value = 0>0</option>
-				<option value = 1>1</option>
+				<option value = 0>No</option>
+				<option value = 1>Yes</option>
 			</select><br>
 
 			Lymph Nodes Examined Positive
@@ -68,8 +68,8 @@
 
 			Radio Therapy
 			<select name="f7">
-				<option value = 0>0</option>
-				<option value = 1>1</option>
+				<option value = 0>No</option>
+				<option value = 1>Yes</option>
 			</select><br>
 
 			Tumor Size
@@ -86,63 +86,60 @@
 
 			Encoded Type of Breast Surgery
 			<select name="f10">
-				<option value = 0>0</option>
-				<option value = 1>1</option>
+				<option value = 0>Breast Conserving</option>
+				<option value = 1>Mastectomy</option>
 			</select><br>
 
 			Encoded Cancer Type Detailed
 			<select name="f11">
-				<option value = 0>0</option>
-				<option value = 1>1</option>
-				<option value = 2>2</option>
-				<option value = 3>3</option>
-				<option value = 4>4</option>
-				<option value = 5>5</option>
-				<option value = 6>6</option>
+				<option value = 1>Breast Invasive Ductal Carcinoma</option>
+				<option value = 2>Breast Mixed Ductal and Lobular Carcinoma</option>
+				<option value = 3>Breast Invasive Lobular Carcinoma</option>
+				<option value = 4>Breast Invasive Mixed Mucinous Carcinoma</option>
+				<option value = 5>Breast</option>
+				<option value = 6>Metaplastic Breast Cancer</option>
 			</select><br>
 
 			Encoded Cellularity
 			<select name="f12">
-				<option value = 0>0</option>
-				<option value = 1>1</option>
-				<option value = 2>2</option>
-				<option value = 3>3</option>
+				<option value = 1>Low</option>
+				<option value = 2>Moderate</option>
+				<option value = 0>High</option>
 			</select><br>
 
 			Encoded Pam50 + Claudin-Low Subtype
 			<select name="f13">
-				<option value = 0>0</option>
-				<option value = 1>1</option>
-				<option value = 2>2</option>
-				<option value = 3>3</option>
-				<option value = 4>4</option>
-				<option value = 5>5</option>
-				<option value = 6>6</option>
+				<option value = 0>Basal</option>
+				<option value = 1>HER2</option>
+				<option value = 2>LumA</option>
+				<option value = 3>LumB</option>
+				<option value = 4>NC</option>
+				<option value = 5>Normal</option>
+				<option value = 6>Claudin-Low</option>
 			</select><br>
 
 			Encoded ER Status
 			<select name="f14">
-				<option value = 0>0</option>
-				<option value = 1>1</option>
+				<option value = 1>Positive</option>
+				<option value = 0>Negative</option>
 			</select><br>
 
 			Encoded HER2 Status
 			<select name="f15">
-				<option value = 0>0</option>
-				<option value = 1>1</option>
+				<option value = 1>Positive</option>
+				<option value = 0>Negative</option>
 			</select><br>
 
 			Encoded Tumor Other Histologic Subtype
 			<select name="f16">
-				<option value = 0>0</option>
-				<option value = 1>1</option>
-				<option value = 2>2</option>
-				<option value = 3>3</option>
-				<option value = 4>4</option>
-				<option value = 5>5</option>
-				<option value = 6>6</option>
-				<option value = 7>7</option>
-				<option value = 8>8</option>
+				<option value = 0>Ducatl/NST</option>
+				<option value = 1>Lobular</option>
+				<option value = 2>Medullary</option>
+				<option value = 3>Metaplastic</option>
+				<option value = 4>Mixed</option>
+				<option value = 5>Mucinous</option>
+				<option value = 6>Other</option>
+				<option value = 7>Tubular/Cribriform</option>
 			</select><br>
 
 			Encoded Inferred Menopausal State
@@ -153,23 +150,23 @@
 
 			Encoded Integrative Cluster
 			<select name="f18">
-				<option value = 0>0</option>
-				<option value = 1>1</option>
+				<option value = 0>1</option>
 				<option value = 2>2</option>
 				<option value = 3>3</option>
-				<option value = 4>4</option>
-				<option value = 5>5</option>
-				<option value = 6>6</option>
-				<option value = 7>7</option>
-				<option value = 8>8</option>
-				<option value = 9>9</option>
-				<option value = 10>10</option>
+				<option value = 4>4ER+</option>
+				<option value = 5>4ER-</option>
+				<option value = 6>5</option>
+				<option value = 7>6</option>
+				<option value = 8>7</option>
+				<option value = 9>8</option>
+				<option value = 10>9</option>
+				<option value = 1>10</option>
 			</select><br>
 
 			Encoded PR Status
 			<select name="f19">
-				<option value = 0>0</option>
-				<option value = 1>1</option>
+				<option value = 1>Positive</option>
+				<option value = 0>Negative</option>
 			</select><br>
 
 			<input type="submit" value="Submit">
