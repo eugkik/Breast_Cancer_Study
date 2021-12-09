@@ -11331,3 +11331,7 @@ section {
     filter: gray;
     filter: grayscale(100%);
   }
+
+  #Our_Team {
+    text-align: center
+  }
