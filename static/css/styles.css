@@ -11327,4 +11327,7 @@ section {
     transform: translate(-50%, -50%);
     color: var(--bs-white-rgb);
   }
-  
+  .blackandwhite {
+    filter: gray;
+    filter: grayscale(100%);
+  }
