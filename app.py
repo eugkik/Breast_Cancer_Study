@@ -3,13 +3,28 @@ from sqlalchemy.engine import create_engine
 import joblib
 import psycopg2
 from flask_cors import CORS
-from config import pw
+import os
 
 app = Flask(__name__)
 
 CORS(app)
 
-DATABASE_URI = f"postgresql+psycopg2://henorakrtnepye:{pw}@ec2-34-233-214-228.compute-1.amazonaws.com:5432/dfq5ifardm38b6"
+# check if hosted on Heroku, set password and debug
+if 'DATABASE_URL' in os.environ:
+    pw = os.getenv('PASSWORD')
+    debug_value = 'False'
+else:
+    from config import pw
+    pw = pw
+    debug_value = 'True'
+
+# set Heroku variables
+heroku_db = 'dfq5ifardm38b6'
+heroku_user = 'henorakrtnepye'
+heroku_host='ec2-34-233-214-228.compute-1.amazonaws.com'
+
+# Heroku database connection
+DATABASE_URI = f"postgresql+psycopg2://{heroku_user}:{pw}@{heroku_host}:5432/{heroku_db}"
 engine = create_engine(DATABASE_URI)
 
 
@@ -56,8 +71,8 @@ loaded_scaler = joblib.load('static/models/scaler.pkl')
 
 # prediction page
 # if POST request, return input data and prediction value
+# insert data into database
 # else return empty form for GET requests
-# insert input values into database
 @app.route("/predict", methods=['POST', 'GET'])
 def predict():
     if request.method == "POST":
@@ -82,7 +97,7 @@ def predict():
         insert_data.append(result[0])
 
         # connect to database and insert input and prediction values
-        conn = psycopg2.connect(database='dfq5ifardm38b6', user='henorakrtnepye', password=pw, host='ec2-34-233-214-228.compute-1.amazonaws.com', port= '5432')
+        conn = psycopg2.connect(database=heroku_db, user=heroku_user, password=pw, host=heroku_host, port='5432')
         cur = conn.cursor()
         cur.execute("INSERT INTO input_data(age_at_diagnosis,chemotherapy,neoplasm_histologic_grade,hormone_therapy,lymph_nodes_examined_positive,mutation_count,radio_therapy,tumor_size,tumor_stage,encoded_type_of_breast_surgery,encoded_cancer_type_detailed,encoded_cellularity,encoded_pam50,encoded_er_status,encoded_her2_status,encoded_tumor_other_histologic_subtype,encoded_inferred_menopausal_state,encoded_integrative_cluster,encoded_pr_status,prediction) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s ,%s, %s, %s, %s, %s, %s)", insert_data)
         cur.close()
@@ -97,4 +112,4 @@ def predict():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=debug_value)
