@@ -1,6 +1,6 @@
 // replace the url later
-url = "static/data/clinical_raw.json"
-d3.json("/api/clinical_raw").then((data) => {
+url = "https://nubc-project3.herokuapp.com/api/clinical_raw"
+d3.json(url).then((data) => {
     var config = {responsive: true};
     //histograms
     var overall_survival_months = data.map(d => d["overall_survival_months"]);
